@@ -1,0 +1,373 @@
+
+
+/* RESPONSIVE MOBILE FIRST */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'lato', sans-serif;
+}
+
+/* Smartphone */
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(247, 225, 229);
+}
+
+
+/* GRIDS por AREAS */
+#gridAreas {
+    display: grid;
+    grid-template-areas: 
+    "cabeza"
+    "menu"
+    "productos1"
+    "productos2"
+    "pie"
+
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 1fr 1fr 75px;
+    
+    grid-column-gap: 10px;
+    grid-row-gap: 10px ;
+}
+
+
+/* Nombrar cada Area */
+header {
+    grid-area: cabeza;
+    padding: 30px;
+    text-align: center;
+}
+
+.logo {
+    color: pink;
+    -webkit-text-stroke: 1px rgb(94, 85, 85);
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif
+    
+}
+
+.slogan { 
+    color: pink;
+    -webkit-text-stroke: 1px rgb(119, 108, 108);
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif
+}
+
+#productos1 { 
+    grid-area: productos1;
+    padding: 10px;
+    align-items: center;
+    
+}
+
+#productos2 { 
+    grid-area: productos2;
+    padding: 10px;
+    align-items: center;
+}
+
+nav {
+    grid-area: menu;
+    padding: 5px;
+}
+
+footer {
+    grid-area: pie;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+/* Item de Menu*/
+
+nav {
+        background-color: white ;
+    }
+    
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 20px;
+        padding: 5px 50px;
+        
+    }
+    
+    
+    ul li {
+        background-color: white;
+        padding: 10px 35px;
+        display: inline;
+        justify-content: center;
+        text-decoration: none;
+        list-style-type: none;
+        
+    }
+    
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    li:hover {
+        background-color: pink;
+    }
+
+
+    /* Articulos de galeria */
+
+    article { 
+        
+        border-radius: 4px;
+        margin: 5px;
+        text-align: center;
+        font-size: 0.75rem;
+        padding: 10px;
+        align-content: center;
+        
+    }
+
+    article p {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+
+
+
+
+/* Flex */
+.flexMenu {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/***************************************************************/
+
+/* Tablets */
+@media (min-width: 480px) and (max-width: 1023px) {
+    /* GRIDS por AREAS */
+#gridAreas {
+    display: grid;
+    grid-template-areas: 
+    "cabeza"
+    "menu"
+    "productos1"
+    "productos2"
+    "pie"
+
+    ;
+    grid-template-columns: 100% ;
+    grid-template-rows: 150px 0.5fr 2.8fr 2.8fr;
+    
+    grid-column-gap: 10px;
+    grid-row-gap: 10px ;
+}
+}
+
+
+
+
+
+/*********************************************************************/
+
+/* Desktop */
+@media (min-width: 1024px) {
+    
+    
+    
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(247, 225, 229);
+    }
+    
+    header {
+        text-align: center;
+        background-image: linear-gradient(90deg, white, pink);
+    }
+    
+    .logo {
+        color: pink;
+        -webkit-text-stroke: 1px rgb(94, 85, 85);
+        font-size: 50px;
+        font-family: 'Times New Roman', Times, serif
+        
+    }
+    
+    .slogan { 
+        color: pink;
+        -webkit-text-stroke: 1px rgb(119, 108, 108);
+        font-size: 25px;
+        font-family: 'Times New Roman', Times, serif
+    }
+    
+    nav {
+        background-color: white ;
+    }
+    
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 20px;
+        padding: 10px 500px;
+        
+    }
+    
+    
+    ul li {
+        background-color: white;
+        padding: 10px 35px;
+        display: inline;
+        justify-content: center;
+        text-decoration: none;
+        list-style-type: none;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+        
+    }
+    
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    
+    li:hover {
+        background-color: pink;
+    }
+    
+    
+    h3 {
+        color: black;
+        align-self: start;
+    }
+
+    /* Animaciones *************************/
+    .transicion{
+        transition: width 2s;
+    }
+    .transicion:hover {
+        width: ;
+    }
+
+
+    .tituloAnimado{
+        animation-name: titulo;
+        animation-iteration-count: 1;
+        animation-duration: 4s;
+    }
+
+    .animacion{
+
+        animation-name: animame;
+    }
+
+    /* KEYFRAME = Linea de Tiempo */
+    @keyframes titulo {
+        from {
+        transform: translate(-75px);
+        }
+        to {
+        transform: translate(0);
+        }
+    }
+
+    @keyframe animame {
+        inicio {
+
+        }
+        30% {
+
+        }
+        50%{
+
+        }
+    }
+
+
+    /******************************************/
+    
+    article { 
+        
+        border-radius: 4px;
+        margin: 5px;
+        text-align: center;
+        font-size: 0.75rem;
+        
+    }
+    
+    section {
+        background-image: linear-gradient(90deg, white, pink);
+        align-content: center;
+        
+    
+    }
+    
+    .vendido { 
+        width: 80%;
+        height: 90%;
+        
+    }
+    
+    .novedades {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .opciones1 {
+        padding: 15px 495px;
+    }
+    
+    footer {
+        text-align: center;
+    }
+    
+    
+    /* GRIDS por AREAS */
+    #gridAreas {
+        display: grid;
+        grid-template-areas: 
+        "cabeza cabeza cabeza"
+        "menu menu menu"
+        ". productos1 ."
+        ". productos2 ."
+        "pie pie pie"
+    
+        ;
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+        grid-template-rows: 150px 0.5fr 2.8fr 2.8fr;
+        
+        grid-column-gap: 10px;
+        grid-row-gap: 10px ;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* Flex */
+    .flexMenu {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .productosFlex {
+        display: flex;
+        
+    
+    }
+    
+}
